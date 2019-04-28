@@ -1,5 +1,7 @@
 package de.heavenhr.hireme.utils;
 
+
+
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -93,8 +95,7 @@ public class ModelConversionUtils {
                              .numberOfApplications(jobOfferEntity.getNumberOfApplications())
                              .offerId(jobOfferEntity.getOfferId())
                              .description(jobOfferEntity.getDescription())
-                             .startDate(new DateTime(jobOfferEntity.getStartDate(), DateTimeZone.UTC))
+                             .startDate(new DateTime(jobOfferEntity.getStartDate()).toDateTime(DateTimeZone.UTC))
                              .build();
     }
-
 }

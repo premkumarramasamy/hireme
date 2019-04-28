@@ -3,6 +3,8 @@ package de.heavenhr.hireme.controller.model;
 import java.util.UUID;
 
 import org.joda.time.DateTime;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AccessLevel;
@@ -29,6 +31,7 @@ public class JobOfferResponse {
     private String description;
     
     @ApiModelProperty(notes = "The start date of the job offer")
+    @DateTimeFormat(iso = ISO.DATE_TIME)
     private DateTime startDate;
     
     @ApiModelProperty(notes = "The number of job applications sent for this job offer")
